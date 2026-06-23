@@ -10,5 +10,17 @@
   "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IG:/Users/yangfan/Documents/Vscode/C_Learning_Project/include -g -std=gnu99 -o CMakeFiles\\c_100.dir\\src\\problem_001.c.obj -c G:\\Users\\yangfan\\Documents\\Vscode\\C_Learning_Project\\src\\problem_001.c",
   "file": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_001.c",
   "output": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/build/CMakeFiles/c_100.dir/src/problem_001.c.obj"
+},
+{
+  "directory": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IG:/Users/yangfan/Documents/Vscode/C_Learning_Project/include -g -std=gnu99 -o CMakeFiles\\c_100.dir\\src\\problem_002.c.obj -c G:\\Users\\yangfan\\Documents\\Vscode\\C_Learning_Project\\src\\problem_002.c",
+  "file": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_002.c",
+  "output": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/build/CMakeFiles/c_100.dir/src/problem_002.c.obj"
+},
+{
+  "directory": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IG:/Users/yangfan/Documents/Vscode/C_Learning_Project/include -g -std=gnu99 -o CMakeFiles\\c_100.dir\\src\\problem_003.c.obj -c G:\\Users\\yangfan\\Documents\\Vscode\\C_Learning_Project\\src\\problem_003.c",
+  "file": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_003.c",
+  "output": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/build/CMakeFiles/c_100.dir/src/problem_003.c.obj"
 }
 ]

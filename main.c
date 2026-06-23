@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include "include/problems.h"
 
@@ -6,6 +6,8 @@
 void print_menu(void){
         printf("\n============C语言100题============\n");
         printf("1.运行第一题 4个数字排列不相同且无重复的三位数\n");
+        printf("2.运行第二题 不同阶段下的奖金数\n");
+        printf("3.运行第三题 求平方数\n");
 
         printf("0.退出程序\n");
         printf("\n=================================\n");
@@ -24,7 +26,12 @@ int main(){
             case 1:
                 problem_001();
                 break;
-
+            case 2:
+                problem_002();
+                break;
+            case 3:
+                problem_003();
+                break;
             case 0:
                 printf("程序即将退出，再见\n");
                 return 0;//结束main，退出整个程序
