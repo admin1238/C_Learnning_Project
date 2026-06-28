@@ -8,7 +8,11 @@ void print_menu(void){
         printf("1.运行第一题 4个数字排列不相同且无重复的三位数\n");
         printf("2.运行第二题 不同阶段下的奖金数\n");
         printf("3.运行第三题 求平方数\n");
-
+        printf("4.运行第四题 求输入某年某月某日，判断这一天是这一年的第几天？\n");
+        printf("5.运行第五题 求输入数？\n");
+        printf("6.运行第六题 用*输出字母C的图案\n");
+        printf("7.运行第七题 输出心形图案\n");
+        printf("8.运行第八题 输出乘法口诀表\n");
         printf("0.退出程序\n");
         printf("\n=================================\n");
 }
@@ -31,6 +35,21 @@ int main(){
                 break;
             case 3:
                 problem_003();
+                break;
+            case 4:
+                problem_004();
+                break;
+            case 5:
+                problem_005();
+                break;
+            case 6:
+                problem_006();
+                break;
+            case 7:
+                problem_007();
+                break;
+            case 8:
+                problem_008();
                 break;
             case 0:
                 printf("程序即将退出，再见\n");

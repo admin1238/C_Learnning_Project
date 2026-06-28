@@ -17,10 +17,14 @@ set(SOURCES
     src/problem_001.c
     src/problem_002.c
     src/problem_003.c
+    src/problem_004.c
+    src/problem_005.c
+    src/problem_006.c
+    src/problem_007.c
+    src/problem_008.c
 )
 
 # 生成控制台可执行程序
-add_executable(c_100 ${SOURCES}
-    src/problem_003.c)
+add_executable(c_100 ${SOURCES})
 # 关键：标记为控制台程序，杜绝 undefined reference to WinMain 报错
 set_target_properties(c_100 PROPERTIES WIN32_EXECUTABLE OFF)
