@@ -1,4 +1,4 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include <stdlib.h>
 #include "include/problems.h"
 
@@ -13,6 +13,11 @@ void print_menu(void){
         printf("6.运行第六题 用*输出字母C的图案\n");
         printf("7.运行第七题 输出心形图案\n");
         printf("8.运行第八题 输出乘法口诀表\n");
+        printf("9.运行第九题 输出国际象棋棋盘\n");
+        printf("10.运行第十题 输出 😊 楼梯\n");
+        // === AUTO_INSERT_MENU ===   ← 加这一行，作为菜单插入位置
+        printf("11. 运行第11题：兔子生崽问题（古典问题）\n");
+
         printf("0.退出程序\n");
         printf("\n=================================\n");
 }
@@ -51,6 +56,17 @@ int main(){
             case 8:
                 problem_008();
                 break;
+            case 9:
+                problem_009();
+                break;
+            case 10:
+                problem_010();
+                break;
+            // === AUTO_INSERT_CASE ===   ← 加这一行，作为case插入位置
+            case 11:
+                problem_011();
+                break;
+            
             case 0:
                 printf("程序即将退出，再见\n");
                 return 0;//结束main，退出整个程序

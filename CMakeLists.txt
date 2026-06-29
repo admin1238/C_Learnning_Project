@@ -9,20 +9,12 @@ set(CMAKE_C_STANDARD_REQUIRED ON)
 # 注册头文件目录，代码中 #include "problems.h" 可直接识别
 include_directories(include)
 
-# 收集所有源码：
-# 1. 根目录的main.c（唯一入口）
-# 2. src文件夹下所有题目 .c 文件
-set(SOURCES
-    main.c
-    src/problem_001.c
-    src/problem_002.c
-    src/problem_003.c
-    src/problem_004.c
-    src/problem_005.c
-    src/problem_006.c
-    src/problem_007.c
-    src/problem_008.c
-)
+# 根目录的主入口文件（固定不变）
+set(MAIN_FILE main.c)
+# 自动扫描 src 下所有 .c 题目文件，新增题目无需修改此处
+file(GLOB PROBLEM_SOURCES "src/*.c")
+# 合并所有源码
+set(SOURCES ${MAIN_FILE} ${PROBLEM_SOURCES})
 
 # 生成控制台可执行程序
 add_executable(c_100 ${SOURCES})

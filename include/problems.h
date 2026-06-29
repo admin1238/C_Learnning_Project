@@ -1,4 +1,4 @@
-#ifndef PROBLEMS_H
+﻿#ifndef PROBLEMS_H
 #define PROBLEMS_H
 
 //每新增一题，在这里加一行声明
@@ -13,4 +13,8 @@ void problem_006 (void);
 void problem_007 (void);
 void problem_008 (void);
 void problem_009 (void);
+void problem_010 (void);
+// === AUTO_INSERT_DECLARE ===   ← 加这一行，作为声明插入位置
+void problem_011(void);
+
 #endif
