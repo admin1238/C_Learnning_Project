@@ -30,8 +30,16 @@ void problem_$fullNum(void)
 }
 "@
 
+$functionPattern = "void\s+problem_$fullNum\s*\(\s*void\s*\)"
+
 if (Test-Path -Path $cPath) {
-    Write-Host "源文件已存在，跳过生成：$cPath" -ForegroundColor Yellow
+    $existingSource = Get-Content -Path $cPath -Raw -Encoding UTF8
+    if ($existingSource -match $functionPattern) {
+        Write-Host "源文件已存在，跳过生成：$cPath" -ForegroundColor Yellow
+    } else {
+        Add-Content -Path $cPath -Value "`n$cContent" -Encoding UTF8
+        Write-Host "源文件已存在但缺少函数，已补充：problem_$fullNum"
+    }
 } else {
     Set-Content -Path $cPath -Value $cContent -Encoding UTF8
     Write-Host "已生成源文件：$cPath"
