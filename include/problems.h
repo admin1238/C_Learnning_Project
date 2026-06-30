@@ -17,5 +17,6 @@ void problem_010 (void);
 // === AUTO_INSERT_DECLARE ===   ← 加这一行，作为声明插入位置
 void problem_011(void);
 void problem_012(void);
+void problem_013(void);
 
 #endif

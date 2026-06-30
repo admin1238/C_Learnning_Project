@@ -17,7 +17,8 @@ void print_menu(void){
         printf("10. 运行第10题 输出 😊 楼梯\n");
         // === AUTO_INSERT_MENU ===   ← 加这一行，作为菜单插入位置
         printf("11. 运行第11题 兔子生崽问题(古典问题)\n");
-        printf("12. 运行第12题：判断101-200之间的素数\n");
+        printf("12. 运行第12题 判断101-200之间的素数\n");
+        printf("13. 运行第13题 输出水仙花数\n");
 
         printf("0.退出程序\n");
         printf("\n=================================\n");
@@ -64,13 +65,16 @@ int main(){
                 problem_010();
                 break;
             // === AUTO_INSERT_CASE ===   ← 加这一行，作为case插入位置
-            case 12:
-                problem_012();
-                break;
             case 11:
                 problem_011();
                 break;
-            
+            case 12:
+                problem_012();
+                break;
+            case 13:
+                problem_013();
+                break;
+
             case 0:
                 printf("程序即将退出，再见\n");
                 return 0;//结束main，退出整个程序

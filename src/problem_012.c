@@ -23,7 +23,7 @@ bool isPrime(int n){
 void problem_012(void)
 {
     printf("===== 第12题：判断101-200之间的素数 =====\n");
-    int j,count=0;
+    int j,count=0; // count 初始值一定要为0;
     for ( j =101;j <= 200;j++){
         if (isPrime( j )){
             printf("%d\n",j);

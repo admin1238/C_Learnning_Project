@@ -45,72 +45,197 @@ if (Test-Path -Path $cPath) {
     Write-Host "已生成源文件：$cPath"
 }
 
-# 2. 头文件自动插入函数声明（防重复）
-$declareMark = "// === AUTO_INSERT_DECLARE ==="
-$declareLine = "void problem_$fullNum(void);"
+# 2. 头文件、菜单、switch 自动区域按题号排序写回
+function Find-MarkerIndex {
+    param(
+        [string[]]$Content,
+        [string]$Marker
+    )
 
-$content = Get-Content -Path $hPath -Encoding UTF8
-$declareExists = $content -match [regex]::Escape($declareLine)
-
-if ($declareExists) {
-    Write-Host "声明已存在，跳过插入" -ForegroundColor Yellow
-} else {
-    $newContent = foreach ($line in $content) {
-        $line
-        if ($line.Contains($declareMark)) {
-            $declareLine
+    for ($i = 0; $i -lt $Content.Count; $i++) {
+        if ($Content[$i].Contains($Marker)) {
+            return $i
         }
     }
 
-    Set-Content -Path $hPath -Value $newContent -Encoding UTF8
-    Write-Host "头文件已插入声明：$declareLine"
+    Write-Error "找不到自动插入标记：$Marker"
+    exit 1
 }
 
-# 3. 菜单自动新增选项（防重复）
-$menuMark = "// === AUTO_INSERT_MENU ==="
-$menuLine = "        printf(`"$numInt. 运行第${numInt}题：$name\n`");"
+function Write-Lines {
+    param(
+        [string]$Path,
+        [string[]]$Lines
+    )
 
-$content = Get-Content -Path $mainPath -Encoding UTF8
-$menuExists = $content -match "printf\(\s*`"$numInt\."
+    Set-Content -Path $Path -Value $Lines -Encoding UTF8
+}
 
-if ($menuExists) {
-    Write-Host "菜单项已存在，跳过插入" -ForegroundColor Yellow
-} else {
-    $newContent = foreach ($line in $content) {
-        $line
-        if ($line.Contains($menuMark)) {
-            $menuLine
+function Update-DeclareBlock {
+    param(
+        [string]$Path,
+        [int]$NewNumber
+    )
+
+    $marker = "// === AUTO_INSERT_DECLARE ==="
+    $content = @(Get-Content -Path $Path -Encoding UTF8)
+    $markerIndex = Find-MarkerIndex -Content $content -Marker $marker
+    $start = $markerIndex + 1
+    $end = $start
+    $numbers = @()
+    $allNumbers = @()
+
+    foreach ($line in $content) {
+        if ($line -match '^\s*void\s+problem_(\d{3})\s*\(\s*void\s*\)\s*;\s*$') {
+            $allNumbers += [int]$Matches[1]
         }
     }
 
-    Set-Content -Path $mainPath -Value $newContent -Encoding UTF8
-    Write-Host "菜单已新增第 $numInt 题选项"
+    while ($end -lt $content.Count) {
+        if ($content[$end] -match '^\s*void\s+problem_(\d{3})\s*\(\s*void\s*\)\s*;\s*$') {
+            $numbers += [int]$Matches[1]
+            $end++
+            continue
+        }
+
+        break
+    }
+
+    if ($allNumbers -notcontains $NewNumber) {
+        $numbers += $NewNumber
+    }
+
+    $newContent = @()
+    for ($i = 0; $i -le $markerIndex; $i++) {
+        $newContent += $content[$i]
+    }
+
+    foreach ($number in ($numbers | Sort-Object -Unique)) {
+        $newContent += ('void problem_{0:D3}(void);' -f $number)
+    }
+
+    for ($i = $end; $i -lt $content.Count; $i++) {
+        $newContent += $content[$i]
+    }
+
+    Write-Lines -Path $Path -Lines $newContent
+    Write-Host "头文件声明已按题号排序"
 }
 
-# 4. switch 自动新增 case 分支（防重复）
-$caseMark = "// === AUTO_INSERT_CASE ==="
-$caseLines = @"
-            case ${numInt}:
-                problem_$fullNum();
-                break;
-"@
+function Update-MenuBlock {
+    param(
+        [string]$Path,
+        [int]$NewNumber,
+        [string]$NewName
+    )
 
-$content = Get-Content -Path $mainPath -Encoding UTF8
-$caseExists = $content -match "case\s+$numInt\s*:"
+    $marker = "// === AUTO_INSERT_MENU ==="
+    $content = @(Get-Content -Path $Path -Encoding UTF8)
+    $markerIndex = Find-MarkerIndex -Content $content -Marker $marker
+    $start = $markerIndex + 1
+    $end = $start
+    $items = @{}
+    $allNumbers = @()
 
-if ($caseExists) {
-    Write-Host "Case 分支已存在，跳过插入" -ForegroundColor Yellow
-} else {
-    $newContent = foreach ($line in $content) {
-        $line
-        if ($line.Contains($caseMark)) {
-            $caseLines
+    foreach ($line in $content) {
+        if ($line -match '^\s*printf\("\s*(\d+)\.\s*运行第\d+题\s*(.*?)\\n"\);\s*$') {
+            $allNumbers += [int]$Matches[1]
         }
     }
 
-    Set-Content -Path $mainPath -Value $newContent -Encoding UTF8
-    Write-Host "switch 已新增 case 分支"
+    while ($end -lt $content.Count) {
+        if ($content[$end] -match '^\s*printf\("\s*(\d+)\.\s*运行第\d+题\s*(.*?)\\n"\);\s*$') {
+            $items[[int]$Matches[1]] = $Matches[2].Trim()
+            $end++
+            continue
+        }
+
+        break
+    }
+
+    if ($allNumbers -notcontains $NewNumber) {
+        $items[$NewNumber] = $NewName
+    }
+
+    $newContent = @()
+    for ($i = 0; $i -le $markerIndex; $i++) {
+        $newContent += $content[$i]
+    }
+
+    foreach ($number in ($items.Keys | Sort-Object)) {
+        $newContent += ('        printf("{0}. 运行第{0}题 {1}\n");' -f $number, $items[$number])
+    }
+
+    for ($i = $end; $i -lt $content.Count; $i++) {
+        $newContent += $content[$i]
+    }
+
+    Write-Lines -Path $Path -Lines $newContent
+    Write-Host "菜单项已按题号排序"
 }
+
+function Update-CaseBlock {
+    param(
+        [string]$Path,
+        [int]$NewNumber
+    )
+
+    $marker = "// === AUTO_INSERT_CASE ==="
+    $content = @(Get-Content -Path $Path -Encoding UTF8)
+    $markerIndex = Find-MarkerIndex -Content $content -Marker $marker
+    $start = $markerIndex + 1
+    $end = $start
+    $numbers = @()
+    $allNumbers = @()
+
+    foreach ($line in $content) {
+        if ($line -match '^\s*case\s+(\d+)\s*:\s*$') {
+            $allNumbers += [int]$Matches[1]
+        }
+    }
+
+    while ($end -lt $content.Count) {
+        $caseMatch = [regex]::Match($content[$end], '^\s*case\s+(\d+)\s*:\s*$')
+        if (
+            $caseMatch.Success -and
+            ($end + 2) -lt $content.Count -and
+            $content[$end + 1] -match '^\s*problem_\d{3}\s*\(\s*\)\s*;\s*$' -and
+            $content[$end + 2] -match '^\s*break\s*;\s*$'
+        ) {
+            $numbers += [int]$caseMatch.Groups[1].Value
+            $end += 3
+            continue
+        }
+
+        break
+    }
+
+    if ($allNumbers -notcontains $NewNumber) {
+        $numbers += $NewNumber
+    }
+
+    $newContent = @()
+    for ($i = 0; $i -le $markerIndex; $i++) {
+        $newContent += $content[$i]
+    }
+
+    foreach ($number in ($numbers | Sort-Object -Unique)) {
+        $newContent += ('            case {0}:' -f $number)
+        $newContent += ('                problem_{0:D3}();' -f $number)
+        $newContent += '                break;'
+    }
+
+    for ($i = $end; $i -lt $content.Count; $i++) {
+        $newContent += $content[$i]
+    }
+
+    Write-Lines -Path $Path -Lines $newContent
+    Write-Host "switch case 已按题号排序"
+}
+
+Update-DeclareBlock -Path $hPath -NewNumber $numInt
+Update-MenuBlock -Path $mainPath -NewNumber $numInt -NewName $name
+Update-CaseBlock -Path $mainPath -NewNumber $numInt
 
 Write-Host "`n全部操作完成！直接点 Build 编译即可使用。"
 Read-Host "按回车退出"

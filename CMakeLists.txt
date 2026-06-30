@@ -12,7 +12,7 @@ include_directories(include)
 # 根目录的主入口文件（固定不变）
 set(MAIN_FILE main.c)
 # 自动扫描 src 下所有 .c 题目文件，新增题目无需修改此处
-file(GLOB PROBLEM_SOURCES "src/*.c")
+file(GLOB PROBLEM_SOURCES CONFIGURE_DEPENDS "src/*.c")
 # 合并所有源码
 set(SOURCES ${MAIN_FILE} ${PROBLEM_SOURCES})
 

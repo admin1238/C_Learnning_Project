@@ -1,4 +1,27 @@
 {
+	"globsDependent" : 
+	[
+		{
+			"expression" : "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/*.c",
+			"listDirectories" : true,
+			"paths" : 
+			[
+				"G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_001.c",
+				"G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_002.c",
+				"G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_003.c",
+				"G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_004.c",
+				"G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_005.c",
+				"G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_006.c",
+				"G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_007.c",
+				"G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_008.c",
+				"G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_009.c",
+				"G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_010.c",
+				"G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_011.c",
+				"G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_012.c",
+				"G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_013.c"
+			]
+		}
+	],
 	"inputs" : 
 	[
 		{
