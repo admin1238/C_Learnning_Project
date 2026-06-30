@@ -70,5 +70,11 @@
   "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IG:/Users/yangfan/Documents/Vscode/C_Learning_Project/include -g -std=gnu99 -o CMakeFiles\\c_100.dir\\src\\problem_011.c.obj -c G:\\Users\\yangfan\\Documents\\Vscode\\C_Learning_Project\\src\\problem_011.c",
   "file": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_011.c",
   "output": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/build/CMakeFiles/c_100.dir/src/problem_011.c.obj"
+},
+{
+  "directory": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IG:/Users/yangfan/Documents/Vscode/C_Learning_Project/include -g -std=gnu99 -o CMakeFiles\\c_100.dir\\src\\problem_012.c.obj -c G:\\Users\\yangfan\\Documents\\Vscode\\C_Learning_Project\\src\\problem_012.c",
+  "file": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_012.c",
+  "output": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/build/CMakeFiles/c_100.dir/src/problem_012.c.obj"
 }
 ]
