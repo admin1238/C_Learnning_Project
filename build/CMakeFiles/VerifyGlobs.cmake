@@ -17,6 +17,8 @@ set(OLD_GLOB
   "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_011.c"
   "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_012.c"
   "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_013.c"
+  "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_014.c"
+  "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_015.c"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

@@ -19,6 +19,9 @@ void print_menu(void){
         printf("11. 运行第11题 兔子生崽问题(古典问题)\n");
         printf("12. 运行第12题 判断101-200之间的素数\n");
         printf("13. 运行第13题 输出水仙花数\n");
+        printf("14. 运行第14题 将一个正整数分解质因数\n");
+        printf("15. 运行第15题 学习成绩分层展示\n");
+        printf("16. 运行第16题 求最大公倍数和最大公因数\n");
 
         printf("0.退出程序\n");
         printf("\n=================================\n");
@@ -73,6 +76,15 @@ int main(){
                 break;
             case 13:
                 problem_013();
+                break;
+            case 14:
+                problem_014();
+                break;
+            case 15:
+                problem_015();
+                break;
+            case 16:
+                problem_016();
                 break;
 
             case 0:

@@ -84,7 +84,9 @@
 				10,
 				11,
 				12,
-				13
+				13,
+				14,
+				15
 			]
 		}
 	],
@@ -130,7 +132,9 @@
 				10,
 				11,
 				12,
-				13
+				13,
+				14,
+				15
 			]
 		}
 	],
@@ -218,6 +222,18 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "src/problem_013.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/problem_014.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/problem_015.c",
 			"sourceGroupIndex" : 0
 		}
 	],

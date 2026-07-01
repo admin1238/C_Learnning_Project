@@ -18,5 +18,8 @@ void problem_010 (void);
 void problem_011(void);
 void problem_012(void);
 void problem_013(void);
+void problem_014(void);
+void problem_015(void);
+void problem_016(void);
 
 #endif
