@@ -19,6 +19,11 @@ set(OLD_GLOB
   "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_013.c"
   "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_014.c"
   "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_015.c"
+  "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_016.c"
+  "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_017.c"
+  "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_018.c"
+  "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_019.c"
+  "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_020.c"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

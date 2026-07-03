@@ -22,6 +22,10 @@ void print_menu(void){
         printf("14. 运行第14题 将一个正整数分解质因数\n");
         printf("15. 运行第15题 学习成绩分层展示\n");
         printf("16. 运行第16题 求最大公倍数和最大公因数\n");
+        printf("17. 运行第17题 输入一行字符,分别统计出其中英文字母,空格,数字和其它字符的个数。\n");
+        printf("18. 运行第18题 求 s=a+aa+aaa+aaaa+aa...a 的值，其中 a 是一个数字，例如 2+22+222+2222+22222 (此时共有5个数相加)\n");
+        printf("19. 运行第19题 一个数如果恰好等于它的因子之和，这个数就称为完数，例如 6=1＋2＋3 ，请编程找出 1000 以内的所有完数\n");
+        printf("20. 运行第20题 小球自由下落\n");
 
         printf("0.退出程序\n");
         printf("\n=================================\n");
@@ -85,6 +89,18 @@ int main(){
                 break;
             case 16:
                 problem_016();
+                break;
+            case 17:
+                problem_017();
+                break;
+            case 18:
+                problem_018();
+                break;
+            case 19:
+                problem_019();
+                break;
+            case 20:
+                problem_020();
                 break;
 
             case 0:
