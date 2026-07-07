@@ -25,5 +25,17 @@ void problem_017(void);
 void problem_018(void);
 void problem_019(void);
 void problem_020(void);
-
+void problem_021(void);
+void problem_022(void);
+void problem_023(void);
+void problem_024(void);
+void problem_025(void);
+void problem_026(void);
+void problem_027(void);
+void problem_028(void);
+void problem_029(void);
+void problem_030(void);
+void problem_031(void);
+long long  factorial (int n );
+void reversePrint (int n);
 #endif
