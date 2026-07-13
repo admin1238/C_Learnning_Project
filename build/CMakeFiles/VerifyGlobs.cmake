@@ -33,6 +33,17 @@ set(OLD_GLOB
   "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_027.c"
   "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_028.c"
   "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_029.c"
+  "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_030.c"
+  "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_031.c"
+  "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_032.c"
+  "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_033.c"
+  "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_034.c"
+  "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_035.c"
+  "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_036.c"
+  "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_037.c"
+  "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_038.c"
+  "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_039.c"
+  "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_040.c"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

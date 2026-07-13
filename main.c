@@ -37,6 +37,15 @@ void print_menu(void){
         printf("29. 运行第29题 输入一个整数，要求：一、求它是几位数，二、逆序打印出各位数\n");
         printf("30. 运行第30题 一个5位数，判断它是不是回文数。即12321是回文数，个位与万位相同，十位与千位相同。\n");
         printf("31. 运行第31题 请输入星期几的第一个字母来判断一下是星期几，如果第一个字母一样，则继续判断第二个字母。\n");
+        printf("32. 运行第32题 删除一个字符串中的指定字母，如：字符串 aca，删除其中的 a 字母。\n");
+        printf("33. 运行第33题 判断一个数字是否为质数\n");
+        printf("34. 运行第34题 练习函数调用\n");
+        printf("35. 运行第35题 字符串反转，如将字符串 neighbour 反转为 roubhgien 。\n");
+        printf("36. 运行第36题 求100之内的素数。\n");
+        printf("37. 运行第37题 对10个数进行排序。\n");
+        printf("38. 运行第38题 求一个3*3矩阵对角线元素之和\n");
+        printf("39. 运行第39题 有一个已经排好序的数组。现输入一个数，要求按原来的规律将它插入数组中。\n");
+        printf("40. 运行第40题 将一个数组逆序输出。\n");
 
         printf("0.退出程序\n");
         printf("\n=================================\n");
@@ -145,6 +154,33 @@ int main(){
                 break;
             case 31:
                 problem_031();
+                break;
+            case 32:
+                problem_032();
+                break;
+            case 33:
+                problem_033();
+                break;
+            case 34:
+                problem_034();
+                break;
+            case 35:
+                problem_035();
+                break;
+            case 36:
+                problem_036();
+                break;
+            case 37:
+                problem_037();
+                break;
+            case 38:
+                problem_038();
+                break;
+            case 39:
+                problem_039();
+                break;
+            case 40:
+                problem_040();
                 break;
 
             case 0:

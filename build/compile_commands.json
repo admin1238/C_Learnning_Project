@@ -178,5 +178,71 @@
   "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IG:/Users/yangfan/Documents/Vscode/C_Learning_Project/include -g -std=gnu99 -o CMakeFiles\\c_100.dir\\src\\problem_029.c.obj -c G:\\Users\\yangfan\\Documents\\Vscode\\C_Learning_Project\\src\\problem_029.c",
   "file": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_029.c",
   "output": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/build/CMakeFiles/c_100.dir/src/problem_029.c.obj"
+},
+{
+  "directory": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IG:/Users/yangfan/Documents/Vscode/C_Learning_Project/include -g -std=gnu99 -o CMakeFiles\\c_100.dir\\src\\problem_030.c.obj -c G:\\Users\\yangfan\\Documents\\Vscode\\C_Learning_Project\\src\\problem_030.c",
+  "file": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_030.c",
+  "output": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/build/CMakeFiles/c_100.dir/src/problem_030.c.obj"
+},
+{
+  "directory": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IG:/Users/yangfan/Documents/Vscode/C_Learning_Project/include -g -std=gnu99 -o CMakeFiles\\c_100.dir\\src\\problem_031.c.obj -c G:\\Users\\yangfan\\Documents\\Vscode\\C_Learning_Project\\src\\problem_031.c",
+  "file": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_031.c",
+  "output": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/build/CMakeFiles/c_100.dir/src/problem_031.c.obj"
+},
+{
+  "directory": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IG:/Users/yangfan/Documents/Vscode/C_Learning_Project/include -g -std=gnu99 -o CMakeFiles\\c_100.dir\\src\\problem_032.c.obj -c G:\\Users\\yangfan\\Documents\\Vscode\\C_Learning_Project\\src\\problem_032.c",
+  "file": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_032.c",
+  "output": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/build/CMakeFiles/c_100.dir/src/problem_032.c.obj"
+},
+{
+  "directory": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IG:/Users/yangfan/Documents/Vscode/C_Learning_Project/include -g -std=gnu99 -o CMakeFiles\\c_100.dir\\src\\problem_033.c.obj -c G:\\Users\\yangfan\\Documents\\Vscode\\C_Learning_Project\\src\\problem_033.c",
+  "file": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_033.c",
+  "output": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/build/CMakeFiles/c_100.dir/src/problem_033.c.obj"
+},
+{
+  "directory": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IG:/Users/yangfan/Documents/Vscode/C_Learning_Project/include -g -std=gnu99 -o CMakeFiles\\c_100.dir\\src\\problem_034.c.obj -c G:\\Users\\yangfan\\Documents\\Vscode\\C_Learning_Project\\src\\problem_034.c",
+  "file": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_034.c",
+  "output": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/build/CMakeFiles/c_100.dir/src/problem_034.c.obj"
+},
+{
+  "directory": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IG:/Users/yangfan/Documents/Vscode/C_Learning_Project/include -g -std=gnu99 -o CMakeFiles\\c_100.dir\\src\\problem_035.c.obj -c G:\\Users\\yangfan\\Documents\\Vscode\\C_Learning_Project\\src\\problem_035.c",
+  "file": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_035.c",
+  "output": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/build/CMakeFiles/c_100.dir/src/problem_035.c.obj"
+},
+{
+  "directory": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IG:/Users/yangfan/Documents/Vscode/C_Learning_Project/include -g -std=gnu99 -o CMakeFiles\\c_100.dir\\src\\problem_036.c.obj -c G:\\Users\\yangfan\\Documents\\Vscode\\C_Learning_Project\\src\\problem_036.c",
+  "file": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_036.c",
+  "output": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/build/CMakeFiles/c_100.dir/src/problem_036.c.obj"
+},
+{
+  "directory": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IG:/Users/yangfan/Documents/Vscode/C_Learning_Project/include -g -std=gnu99 -o CMakeFiles\\c_100.dir\\src\\problem_037.c.obj -c G:\\Users\\yangfan\\Documents\\Vscode\\C_Learning_Project\\src\\problem_037.c",
+  "file": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_037.c",
+  "output": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/build/CMakeFiles/c_100.dir/src/problem_037.c.obj"
+},
+{
+  "directory": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IG:/Users/yangfan/Documents/Vscode/C_Learning_Project/include -g -std=gnu99 -o CMakeFiles\\c_100.dir\\src\\problem_038.c.obj -c G:\\Users\\yangfan\\Documents\\Vscode\\C_Learning_Project\\src\\problem_038.c",
+  "file": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_038.c",
+  "output": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/build/CMakeFiles/c_100.dir/src/problem_038.c.obj"
+},
+{
+  "directory": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IG:/Users/yangfan/Documents/Vscode/C_Learning_Project/include -g -std=gnu99 -o CMakeFiles\\c_100.dir\\src\\problem_039.c.obj -c G:\\Users\\yangfan\\Documents\\Vscode\\C_Learning_Project\\src\\problem_039.c",
+  "file": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_039.c",
+  "output": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/build/CMakeFiles/c_100.dir/src/problem_039.c.obj"
+},
+{
+  "directory": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe -IG:/Users/yangfan/Documents/Vscode/C_Learning_Project/include -g -std=gnu99 -o CMakeFiles\\c_100.dir\\src\\problem_040.c.obj -c G:\\Users\\yangfan\\Documents\\Vscode\\C_Learning_Project\\src\\problem_040.c",
+  "file": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/src/problem_040.c",
+  "output": "G:/Users/yangfan/Documents/Vscode/C_Learning_Project/build/CMakeFiles/c_100.dir/src/problem_040.c.obj"
 }
 ]
